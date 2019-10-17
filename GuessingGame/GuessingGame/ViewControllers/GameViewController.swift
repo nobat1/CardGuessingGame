@@ -82,6 +82,7 @@ class GameViewController: UIViewController {
     
     private func display(card: Card) {
         cardTitleLabels.forEach({ $0.text = card.value.rawValue })
+        cardSuitImageViews.forEach({$0.image = UIImage(named: card.suit.rawValue)})
     }
     
     private func userGuessed(_ guess: CardsGameEngine.UserGuessOption) {
